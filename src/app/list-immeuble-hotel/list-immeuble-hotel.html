@@ -1,0 +1,17 @@
+<app-nav-bar-component></app-nav-bar-component>
+<div class="flex flex-row " >
+
+        <!-- @for (building of details; track building.id) {
+    <a matButton="outlined" routerLink="details/{{building.id}}" target="_blank">Hotel {{building.id}}</a>
+
+        }  -->
+
+     @for (property of properties$ | async; track property.id) {
+
+                <a matButton="outlined" routerLink="details/{{property.id}}" target="_blank">Hotel {{property.id}}</a>
+
+        }
+</div>
+
+
+
